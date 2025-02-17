@@ -102,8 +102,14 @@ console.log(cart(20)); // Expected output: "Total Cart Value: $20"
 console.log(cart(35)); // Expected output: "Total Cart Value: $55"
 
 // Task 8: Recursion in JavaScript 
-
-
-
-
+function calculateGrowth(years, smount ) {
+    //  Each year it will increase revenue by 5 % until it reaching 10yr
+    if (years >= 10) {
+        return `Projected Revenue: $${amount.toFixed(2)}`;
+    }
+    // Increase revenue by 5% each year
+    return calculateGrowth(years + 1, revenue * 1.05);
+} 
  // Test Data: 
+ console.log(calculateSavings(8, 1000)); // Expected output: "Projected Savings: $1102.50"
+ console.log(calculateSavings(5, 5000)); // Expected output: "Projected Savings: $6381.41"
