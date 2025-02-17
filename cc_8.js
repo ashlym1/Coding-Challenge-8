@@ -15,8 +15,8 @@ const calculatedDiscount= function (price, discountRate) {
     return `Final Price : $${finalPrice.toFixed(2) }`;// returning the formatted final price
 };
     // Test Data :
-console.log(calculateDiscount(100, 0.2)); // Expected output: "Final Price: $80.00"
-console.log(calculateDiscount(250, 0.15));// Expected output: "Final Price: $212.50"
+    console.log(calculateDiscount(100, 0.2)); // Expected output: "Final Price: $80.00"
+    console.log(calculateDiscount(250, 0.15)); // Expected output: "Final Price: $212.50"
 
 // Task 3: Arrow Function 
  const calculateServiceFee = (amount,servicesType)=> {
@@ -81,11 +81,14 @@ console.log(calculateRentalCost(5, "Luxury", false)); // Expected output: "Total
 console.log(calculateLoanPayment(5000, 0.07, 3)); // Expected output: "Total Payment: $6050.00"
 
 // Task 6- Higher-order function
-
-
-
+let transactions = [200, 1500, 3200, 800, 2500]; 
+const filterLargeTransactions = (transactions, filterFunction) => {
+    return transactions.filter(filterFunction); // Using filter () to find transactions above 1000
+}; 
 
   // Test Data :
+console.log(filterLargeTransactions(transactions, amount => amount > 1000)) ; // Expected output: [1500, 3200, 2500]
+
 
 // Task 7- Closure 
 
