@@ -85,15 +85,21 @@ let transactions = [200, 1500, 3200, 800, 2500];
 const filterLargeTransactions = (transactions, filterFunction) => {
     return transactions.filter(filterFunction); // Using filter () to find transactions above 1000
 }; 
-
   // Test Data :
 console.log(filterLargeTransactions(transactions, amount => amount > 1000)) ; // Expected output: [1500, 3200, 2500]
 
-
 // Task 7- Closure 
-
-
+function createCart Tracker() { 
+    let total=0 ; // Starting with an initial value at 0 
+    return function (price) { 
+        total += price; 
+        return`Total Cart Value: $${total.toFixed(2)}`;
+    };
+}
+let cart = createCartTracker ();  // tracking iteams and total 
  // Test Data : 
+console.log(cart(20)); // Expected output: "Total Cart Value: $20"
+console.log(cart(35)); // Expected output: "Total Cart Value: $55"
 
 // Task 8: Recursion in JavaScript 
 
