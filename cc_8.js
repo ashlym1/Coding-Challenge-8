@@ -9,7 +9,7 @@ console.log(calculateSalary(5000, 500, 0.1)); // Expected output: "Net Salary: $
 console.log(calculateSalary(7000, 1000, 0.15)); //Expected output: "Net Salary: $6950.00"
 
 // Task 2- Function Expression 
-const calculatedDiscount= function (price, discountRate) {
+const calculateDiscount= function (price, discountRate) {
     let discountAmount= price * discountRate; // calculating the discount amount 
     let finalPrice= price-discountAmount; // subtracting amount from the original price 
     return `Final Price : $${finalPrice.toFixed(2) }`;// returning the formatted final price
