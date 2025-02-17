@@ -1,6 +1,6 @@
 // Task 1- Function Declaration
 function calculateSalary (baseSalary,bonus, taxRate) {
-let taxAmount = baseSalary * taxRate; // calulating the tax amount based on the salary 
+let taxAmount = baseSalary * taxRate; // Multiplying base salary and tax rate  to get the tax amount 
 let netSalary = (baseSalary + bonus)-taxAmount; // net salary + the bonus - tax
 return `netSalary: $${netSalary.toFixed(2)}`; // formating the net salary 
 }
