@@ -11,7 +11,7 @@ console.log(calculateSalary(7000, 1000, 0.15)); //Expected output: "Net Salary: 
 // Task 2- Function Expression 
 const calculatedDiscount= function (price, discountRate) {
     let discountAmount= price * discountRate; // calculating the discount amount 
-    let finalPrice= pricerice-discountAmount; // subtracting amount from the original price 
+    let finalPrice= price-discountAmount; // subtracting amount from the original price 
     return `Final Price : $${finalPrice.toFixed(2) }`;// returning the formatted final price
 };
     // Test Data :
@@ -19,11 +19,11 @@ const calculatedDiscount= function (price, discountRate) {
     console.log(calculateDiscount(250, 0.15)); // Expected output: "Final Price: $212.50"
 
 // Task 3: Arrow Function 
- const calculateServiceFee = (amount,servicesType)=> {
+ const calculateServiceFee = (amount,serviceType)=> {
     let feeRate;
     if (serviceType ==="Premium") { 
         feeRate= 0.15;// 15 % of the amount 
-     } else if (serviceType === "Standars" ){
+     } else if (serviceType === "Standard" ){
         feeRate= 0.10 ; // 10 % of the amount
      } else if (serviceType=== "Basic") {
         feeRate = 0.05; // 5% of the amount 
@@ -31,7 +31,7 @@ const calculatedDiscount= function (price, discountRate) {
     return "Invalid service Type"; // incase of any incorrect inputs 
  }
 let serviceFee= amount * feeRate; // Calculating the service fee 
-return `Service Fee: $${serviceFee.Fee.toFixed(2)}`;
+return `Service Fee: $${serviceFee.toFixed(2)}`;
  };
     // Test Data: 
 console.log(calculateServiceFee(200, "Premium")); //Expected output: "Service Fee: $30.00"
@@ -89,7 +89,7 @@ const filterLargeTransactions = (transactions, filterFunction) => {
 console.log(filterLargeTransactions(transactions, amount => amount > 1000)) ; // Expected output: [1500, 3200, 2500]
 
 // Task 7- Closure 
-function createCart Tracker() { 
+function createCartTracker() { 
     let total=0 ; // Starting with an initial value at 0 
     return function (price) { 
         total += price; 
@@ -102,13 +102,13 @@ console.log(cart(20)); // Expected output: "Total Cart Value: $20"
 console.log(cart(35)); // Expected output: "Total Cart Value: $55"
 
 // Task 8: Recursion in JavaScript 
-function calculateGrowth(years, smount ) {
-    //  Each year it will increase revenue by 5 % until it reaching 10yr
+function calculateSavings(years, amount ) {
+    //  Each year it will increase savings by 5 % until it reaching 10yr
     if (years >= 10) {
-        return `Projected Revenue: $${amount.toFixed(2)}`;
+        return `Projected amount: $${amount.toFixed(2)}`;
     }
-    // Increase revenue by 5% each year
-    return calculateGrowth(years + 1, revenue * 1.05);
+    // Increase amount by 5% each year
+    return calculateSavings(years + 1, amount * 1.05);
 } 
  // Test Data: 
  console.log(calculateSavings(8, 1000)); // Expected output: "Projected Savings: $1102.50"
