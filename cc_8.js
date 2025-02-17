@@ -69,15 +69,16 @@ console.log(calculateRentalCost(3, "Economy", true)); // Expected output: "Total
 console.log(calculateRentalCost(5, "Luxury", false)); // Expected output: "Total Rental Cost: $500"
 
 
-
-
 // Task 5: Returning Values 
-
-
-
+ function calculateLoanPayment (principal,rate,time) {
+    let interest= principal*rate*time ; // calculating the interest 
+    let totalPayment=principal + interest; // addinf interest to the principal 
+    return`Total Payment: $${totalPayment.toFixed(2)}`; //formating the total to 2nd decimal place
+ }
 
  // Test Date 
-
+ console.log(calculateLoanPayment(1000, 0.05, 2));// Expected output: "Total Payment: $1100.00"
+console.log(calculateLoanPayment(5000, 0.07, 3)); // Expected output: "Total Payment: $6050.00"
 
 // Task 6- Higher-order function
 
